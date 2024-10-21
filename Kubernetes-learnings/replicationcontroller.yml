@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myreplicationcontroller
+spec: 
+  replicas: 3
+  selector:
+    app: apache1
+  template:
+    metadata:
+      name: apache
+      labels:
+        app: apache1
+    spec:
+      containers:
+        - name: apachecon
+          image: httpd
+          ports:
+            - containerPort: 80

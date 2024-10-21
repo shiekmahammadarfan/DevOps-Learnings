@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: conenv
+spec:
+  containers:
+    - name: c01
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo hello-k8s; sleep 10; done"]
+      env:
+        - name: state
+          value: production
+        - name: myname
+          value: john 

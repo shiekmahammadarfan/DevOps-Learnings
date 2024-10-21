@@ -1,0 +1,20 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: triconpod
+  labels:
+    state: Dev
+    team: AlphaTech
+    teamlead: Arfan
+spec:
+  containers:
+    - name: c04
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Hi Team...This is dev team...; sleep 100; done"]
+    - name: c05
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Currently working on second container...; sleep 100; done"]
+    - name: c06
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Processing towards third container...; sleep 100; done"]
+
